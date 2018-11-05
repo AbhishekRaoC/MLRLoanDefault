@@ -4,4 +4,4 @@ Written By Ryan Boldi, Abhishek Rao Chimbili and Abdulla Alattar
 
 ## StandbyMathPredict
 
-## Multi Level Regression mode
+## Multi Level Regression model
