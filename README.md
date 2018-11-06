@@ -28,5 +28,5 @@ by town
 :Missing Attribute Values: None
 :Creator: Harrison, D. and Rubinfeld, D.L.
 
-# can predict MEDV if given the 13 independant variables
+### Can predict MEDV if given the 13 Independant variables
 
