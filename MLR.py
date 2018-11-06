@@ -21,7 +21,7 @@ y = labelencoder_y.fit_transform(y)
 
 #splitting dataset into the training and testing datasets
 from sklearn.cross_validation import train_test_split
-X_train , X_test, Y_train, Y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
+X_train , X_test, Y_train, Y_test = train_test_split(x,y, test_size = 0.1, random_state = 0)
 
 #fitting multiple linear regression to the training set
 from sklearn.linear_model import LinearRegression
