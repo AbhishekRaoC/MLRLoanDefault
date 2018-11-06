@@ -10,7 +10,7 @@ import pandas as pd
 #x = dataset.iloc[:, :-1].values
 #y = dataset.iloc[:,3].values
 
-from sklearn import load_boston
+from sklearn.datasets import load_boston
 x,y = load_boston(True)
 
 #encoding the categorical data
