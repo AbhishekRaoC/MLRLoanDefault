@@ -4,9 +4,13 @@ The 2 files for this program are MLR.py. It uses sklearn's boston dataset to pre
 
 # Boston Dataset:
 Data Set Characteristics:
+
 :Number of Instances: 506
+
 :Number of Attributes: 13 numeric/categorical predictive
+
 :Median Value (attribute 14) is usually the target
+
 :Attribute Information (in order):
 - CRIM per capita crime rate by town
 - ZN proportion of residential land zoned for lots over 25,
@@ -25,7 +29,9 @@ r; 0 otherwise)
 by town
 - LSTAT % lower status of the population
 - MEDV Median value of owner-occupied homes in $1000's
+
 :Missing Attribute Values: None
+
 :Creator: Harrison, D. and Rubinfeld, D.L.
 
 ### Can predict MEDV if given the 13 Independant variables
