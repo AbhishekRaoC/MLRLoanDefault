@@ -7,15 +7,15 @@ The linear regression model had much higher confidence and accuracy than the SVM
 
 
 ## Boston Dataset:
-###Data Set Characteristics:
+### Data Set Characteristics:
 
-###Number of Instances: 506
+### Number of Instances: 506
 
-###Number of Attributes: 13 numeric/categorical predictive
+### Number of Attributes: 13 numeric/categorical predictive
 
-###Median Value (attribute 14) is the target for this project
+### Median Value (attribute 14) is the target for this project
 
-###Attribute Information (in order):
+### Attribute Information (in order):
 - CRIM per capita crime rate by town
 - ZN proportion of residential land zoned for lots over 25,
 000 sq.ft.
@@ -34,9 +34,7 @@ by town
 - LSTAT % lower status of the population
 - MEDV Median value of owner-occupied homes in $1000's
 
-###Missing Attribute Values: None
-
-###Creator: Harrison, D. and Rubinfeld, D.L.
+### Creator: Harrison, D. and Rubinfeld, D.L.
 
 ## Can predict MEDV if given the 13 Independant variables
 
