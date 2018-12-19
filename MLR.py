@@ -1,34 +1,39 @@
-#mulitple linear regression
 import numpy as np
-import matplotlib.pyplot as plt
+from sklearn import preprocessing, model_selection, svm
+from sklearn.linear_model import LinearRegression
 import pandas as pd
 
 
-##importing dataset
-#file = "Haberman.csv"
-#dataset = pf.read_csv(file)
-#x = dataset.iloc[:, :-1].values
-#y = dataset.iloc[:,3].values
-
 from sklearn.datasets import load_boston
-x,y = load_boston(True)
+data = load_boston()
 
-#encoding the categorical data
-from sklearn.preprocessing import LabelEncoder
-#encoding the dependant variable
-labelencoder_y = LabelEncoder()
-y = labelencoder_y.fit_transform(y)
+df = pd.DataFrame(data['data'], columns= data['feature_names'])
+df['price'] = data['target']
+
+#print(df.describe())
+
+df.fillna(value=-99999, inplace = True)
+
+X = np.array(df.drop(['price'],1))
+X = preprocessing.scale(X)
+y = np.array(df['price'])
 
 #splitting dataset into the training and testing datasets
-from sklearn.cross_validation import train_test_split
-X_train , X_test, Y_train, Y_test = train_test_split(x,y, test_size = 0.33, random_state = 0)
+X_train , X_test, y_train, y_test = model_selection.train_test_split(X,y, test_size = 0.2)
 
-#fitting multiple linear regression to the training set
-from sklearn.linear_model import LinearRegression
-regressor = LinearRegression()
-regressor.fit(X_train, Y_train)
+#fitting the data to the given classifier
+clf = svm.SVR(gamma = 'auto')
+clf.fit(X_train, y_train)
+confidence = clf.score(X_test, y_test)
+print("confidence of support vector machine ", confidence)
+
+linclf = LinearRegression()
+linclf.fit(X_train, y_train)
+confidence = linclf.score(X_test, y_test)
+print("Confidence of linear regression model ", confidence ,'\n')
 
 #predicting the y values for the x test values using the regressor
-y_predicted = regressor.predict(X_test)
-#test = [0 for i in range(13)]
-#test_pred = regressor.predict(np.array(test).reshape(1,-1))
+y_pred = linclf.predict(X_test)
+print(np.round(y_pred[:5], 2))
+print((y_test[:5]))
+#^ compare actual to predicted for first 5
