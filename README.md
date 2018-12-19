@@ -1,17 +1,21 @@
 Written By Ryan Boldi, Abhishek Rao Chimbili and Abdulla Alattar
 
-The 2 files for this program are MLR.py. It uses sklearn's boston dataset to predict house prices based on a bunch of independant variables.
+The files for this program are MLR.py. It uses sklearn's boston dataset to predict house prices based on a bunch of independant variables.
 
-# Boston Dataset:
-Data Set Characteristics:
+There are two different classifiers that I tried to use, a support vector machine, and a simple linear regression model.
+The linear regression model had much higher confidence and accuracy than the SVM, so I based all the predictions off of the linear regression model.
 
-:Number of Instances: 506
 
-:Number of Attributes: 13 numeric/categorical predictive
+## Boston Dataset:
+###Data Set Characteristics:
 
-:Median Value (attribute 14) is usually the target
+###Number of Instances: 506
 
-:Attribute Information (in order):
+###Number of Attributes: 13 numeric/categorical predictive
+
+###Median Value (attribute 14) is the target for this project
+
+###Attribute Information (in order):
 - CRIM per capita crime rate by town
 - ZN proportion of residential land zoned for lots over 25,
 000 sq.ft.
@@ -30,9 +34,9 @@ by town
 - LSTAT % lower status of the population
 - MEDV Median value of owner-occupied homes in $1000's
 
-:Missing Attribute Values: None
+###Missing Attribute Values: None
 
-:Creator: Harrison, D. and Rubinfeld, D.L.
+###Creator: Harrison, D. and Rubinfeld, D.L.
 
-### Can predict MEDV if given the 13 Independant variables
+## Can predict MEDV if given the 13 Independant variables
 
