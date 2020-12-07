@@ -11,7 +11,6 @@ df = pd.DataFrame(data['data'], columns= data['feature_names'])
 df['price'] = data['target']
 
 #print(df.describe())
-
 df.fillna(value=-99999, inplace = True)
 
 X = np.array(df.drop(['price'],1))
@@ -34,6 +33,6 @@ print("Confidence of linear regression model ", confidence ,'\n')
 
 #predicting the y values for the x test values using the regressor
 y_pred = linclf.predict(X_test)
-print(np.round(y_pred[:5], 2))
-print((y_test[:5]))
+print("Predicted value {}".format(np.round(y_pred[:7], 1)))
+print("Actual Value    {}".format(np.round(y_test[:7], 1)))
 #^ compare actual to predicted for first 5
